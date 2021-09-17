@@ -5,11 +5,12 @@ var prdDetail = document.querySelector('#prdDetail');
 var ecommerce = [prdImpression, prdClick, prdDetail]
 
 for (i=0; i < ecommerce.length; i++){
-    ecommerce[i].addEventListener(function(){
+    ecommerce[i].addEventListener('click', function(){
         if (ecommerce[i] == prdImpression){
             dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
             dataLayer.push({
-            'ecommerce': {
+                'event': 'productImpression',
+                'ecommerce': {
                 'currencyCode': 'EUR',                       // Local currency is optional.
                 'impressions': [
                 {
@@ -61,7 +62,8 @@ for (i=0; i < ecommerce.length; i++){
         else if (ecommerce == prdDetail){
             dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
             dataLayer.push({
-            'ecommerce': {
+                'event': 'productDetail',
+                'ecommerce': {
                 'detail': {
                 'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
                 'products': [{
