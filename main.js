@@ -34,3 +34,24 @@ prdImpression.addEventListener('click', function(){
         }
         })
     })
+
+prdClick.addEventListener('click', function(){
+    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({
+        'event': 'productClick',
+        'ecommerce': {
+        'click': {
+            'actionField': {'list': 'Search Results'},      // Optional list property.
+            'products': [{
+            'name': 'produto teste',                      // Name or ID is required.
+            'id': '123456',
+            'price': 199.90,
+            'brand': 'testeBr',
+            'category': 'testeCat',
+            'variant': 'testeVt',
+            'position': 'testePos'
+            }]
+        }
+        },
+})
+})
