@@ -62,6 +62,7 @@ prdClick.addEventListener('click', function(){
 prdDetail.addEventListener('click', function(){
     dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
     dataLayer.push({
+    'event': 'productDetail',
     'ecommerce': {
         'detail': {
         'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
