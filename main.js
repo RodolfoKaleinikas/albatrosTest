@@ -202,3 +202,139 @@ removeFromCart.addEventListener('click', function(){
         }
     });
 })
+
+viewPromotion.addEventListener('click', function(){
+    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({
+        event: "view_promotion",
+        ecommerce: {
+            items: [{
+            item_name: "Donut Friday Scented T-Shirt", // Name or ID is required.
+            item_id: "67890",
+            price: 33.75,
+            item_brand: "Google",
+            item_category: "Apparel",
+            item_category2: "Mens",
+            item_category3: "Shirts",
+            item_category4: "Tshirts",
+            item_variant: "Black",
+            promotion_id: "abc123",
+            promotion_name: "summer_promo",
+            creative_name: "instore_suummer",
+            creative_slot: "1",
+            location_id: "hero_banner",
+            index: 1,
+            quantity: 1
+            }]
+        }
+    });
+})
+
+selectPromotion.addEventListener('click', function(){
+    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({
+        event: "select_promotion",
+        ecommerce: {
+            items: [{
+                item_name: "Donut Friday Scented T-Shirt", // Name or ID is required.
+                item_id: "67890",
+                price: 33.75,
+                item_brand: "Google",
+                item_category: "Apparel",
+                item_category2: "Mens",
+                item_category3: "Shirts",
+                item_category4: "Tshirts",
+                item_variant: "Black",
+                promotion_id: "abc123",
+                promotion_name: "summer_promo",
+                creative_name: "instore_suummer",
+                creative_slot: "1",
+                location_id: "hero_banner",
+                index: 1,
+                quantity: 1
+            }]
+        }
+    });
+})
+
+beginCheckout.addEventListener('click', function(){
+    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({
+        event: "begin_checkout",
+        ecommerce: {
+            items: [{
+                item_name: "Donut Friday Scented T-Shirt", // Name or ID is required.
+                item_id: "67890",
+                price: 33.75,
+                item_brand: "Google",
+                item_category: "Apparel",
+                item_category2: "Mens",
+                item_category3: "Shirts",
+                item_category4: "Tshirts",
+                item_variant: "Black",
+                item_list_name: "Search Results",
+                item_list_id: "SR123",
+                index: 1,
+                quantity: 1
+            }]
+        }
+    });
+})
+
+purchase.addEventListener('click', function(){
+    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({
+    event: "purchase",
+    ecommerce: {
+        transaction_id: "T12345",
+        affiliation: "Online Store",
+        value: "59.89",
+        tax: "4.90",
+        shipping: "5.99",
+        currency: "EUR",
+        coupon: "SUMMER_SALE",
+        items: [{
+            item_name: "Triblend Android T-Shirt",
+            item_id: "12345",
+            price: "15.25",
+            item_brand: "Google",
+            item_category: "Apparel",
+            item_variant: "Gray",
+            quantity: 1
+        }, {
+            item_name: "Donut Friday Scented T-Shirt",
+            item_id: "67890",
+            price: 33.75,
+            item_brand: "Google",
+            item_category: "Apparel",
+            item_variant: "Black",
+            quantity: 1
+        }]
+    }
+    });
+})
+
+refund.addEventListener('click', function(){
+    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({
+    event: "refund",
+    ecommerce: {
+        transaction_id: "T12345", // Transaction ID.
+        items: [{
+            item_name: "Donut Friday Scented T-Shirt",
+            item_id: "67890", // ID is required.
+            price: 33.75,
+            item_brand: "Google",
+            item_category: "Apparel",
+            item_category2: "Mens",
+            item_category3: "Shirts",
+            item_category4: "Tshirts",
+            item_variant: "Black",
+            item_list_name: "Search Results", // If associated with a list selection.
+            item_list_id: "SR123", // If associated with a list selection.
+            index: 1, // If associated with a list selection.
+            quantity: 1 // Quantity is required.
+        }]
+    }
+    });
+})
