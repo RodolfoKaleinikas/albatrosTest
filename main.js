@@ -221,6 +221,7 @@ checkoutOption.addEventListener('click', function(){
 purchaseUA.addEventListener('click', function(){
     dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
     dataLayer.push({
+    'event': 'purchaseUa',
     'ecommerce': {
         'purchase': {
             'actionField': {
@@ -258,6 +259,7 @@ purchaseUA.addEventListener('click', function(){
 partialRefundUA.addEventListener('click', function(){
     dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
     dataLayer.push({
+    'event': 'partialRefundUa',
     'ecommerce': {
         'refund': {
             'actionField': {'id': 'T12345'},        // Transaction ID.
@@ -273,6 +275,7 @@ partialRefundUA.addEventListener('click', function(){
 fullRefundUA.addEventListener('click', function(){
     dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
     dataLayer.push({
+    'event': 'fullRefundUa',
     'ecommerce': {
         'refund': {
             'actionField': {'id': 'T12345'}         // Transaction ID. Required for purchases and refunds.
